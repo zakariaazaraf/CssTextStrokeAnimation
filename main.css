@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+section div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+
+section div:nth-child(2) {
+  background-color: white;
+  clip-path: circle(250px);
+}
+
+section div h2 {
+  position: absolute;
+  left: 0;
+  color: white;
+  font-size: 10em;
+  white-space: nowrap;
+  line-height: 100vh;
+  transform: translateX(100%);
+  animation: animationText 60s linear infinite forwards;
+}
+
+section div:nth-child(2) h2 {
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+  color: transparent;
+}
+
+@keyframes animationText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
